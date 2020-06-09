@@ -1,0 +1,24 @@
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+
+ .header-item{
+   width: 500px;
+   border: 1px solid black;
+   text-align: center;
+   border-bottom: none;
+
+   .input-task{
+      display: flex;
+     padding: 0 0 10px 10px;
+
+     .task{
+       width: 300px;
+       height: 30px;
+       text-align: left;
+     }
+   }
+ }
+}
