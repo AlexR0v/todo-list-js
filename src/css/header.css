@@ -10,10 +10,13 @@
     border-bottom: none; }
     .header .header-item .input-task {
       display: flex;
+      position: relative;
       padding: 0 0 10px 10px; }
       .header .header-item .input-task .task {
         width: 300px;
         height: 30px;
         text-align: left; }
+      .header .header-item .input-task .btn {
+        margin-left: 10px; }
 
 /*# sourceMappingURL=header.css.map */

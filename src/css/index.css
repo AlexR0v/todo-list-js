@@ -12,11 +12,14 @@
     border-bottom: none; }
     .header .header-item .input-task {
       display: flex;
+      position: relative;
       padding: 0 0 10px 10px; }
       .header .header-item .input-task .task {
         width: 300px;
         height: 30px;
         text-align: left; }
+      .header .header-item .input-task .btn {
+        margin-left: 10px; }
 
 .list {
   width: 100%;
@@ -35,6 +38,7 @@
         padding: 10px 0 10px 15px;
         margin: 10px;
         font-size: 15px;
+        color: #000;
         cursor: move; }
       .list .list-item .todo-list .delete {
         width: 40px;

@@ -1,10 +1,12 @@
-import './scss/index.scss'
-import changeTask from '@/components/changeTask';
+import './scss/index.scss';
 import importantTask from '@/components/importantTask';
+import changeTask from '@/components/changeTask';
+import addTask from '@/components/addTask';
 
 window.addEventListener('DOMContentLoaded' , () => {
 	'use strict';
 
-	changeTask();
 	importantTask();
+	changeTask();
+	addTask();
 });

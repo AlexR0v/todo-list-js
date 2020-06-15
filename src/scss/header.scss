@@ -12,12 +12,17 @@
 
    .input-task{
       display: flex;
+     position: relative;
      padding: 0 0 10px 10px;
 
      .task{
        width: 300px;
        height: 30px;
        text-align: left;
+     }
+
+     .btn{
+       margin-left: 10px;
      }
    }
  }

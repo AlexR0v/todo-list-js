@@ -16,23 +16,25 @@
 	<div class="header-item">
 		<h1>My todo list</h1>
 		<div class="input-task">
-			<input class="task" type="text" value="Внести новую задачу...">
+			<input type="text" id="input" class="task" type="text"
+				   placeholder="Новая задача..." value="">
+			<button class="btn">Добавить</button>
 		</div>
 	</div>
 </div>
 <div class="list">
 	<div class="list-item">
 		<ul class="todo-list">
-			<li id="add" class="list-task">Выпить кофе</li>
+			<li class="list-task">Выпить кофе</li>
 			<li class="list-task">Выучить JavaScript</li>
 			<li class="list-task">Написать список задач</li>
 		</ul>
-		<ul class="todo-list">
+		<ul id="delete" class="todo-list">
 			<li class="delete material-icons">delete</li>
 			<li class="delete material-icons">delete</li>
 			<li class="delete material-icons">delete</li>
 		</ul>
-		<ul class="todo-list">
+		<ul id="important" class="todo-list">
 			<li class="important material-icons">priority_high</li>
 			<li class="important material-icons">priority_high</li>
 			<li class="important material-icons">priority_high</li>
