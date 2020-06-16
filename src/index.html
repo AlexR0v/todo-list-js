@@ -25,19 +25,24 @@
 <div class="list">
 	<div class="list-item">
 		<ul id="todo-list" class="todo-list">
-			<li class="list-task">Выпить кофе</li>
-			<li class="list-task">Выучить JavaScript</li>
-			<li class="list-task">Написать список задач</li>
-		</ul>
-		<ul id="delete" class="todo-list">
-			<li class="delete material-icons">delete</li>
-			<li class="delete material-icons">delete</li>
-			<li class="delete material-icons">delete</li>
-		</ul>
-		<ul id="important" class="todo-list">
-			<li class="important material-icons">priority_high</li>
-			<li class="important material-icons">priority_high</li>
-			<li class="important material-icons">priority_high</li>
+			<li datatype="delete" class="list-task">Выпить кофе
+				<ul class="buttons">
+					<li class="delete material-icons">delete</li>
+					<li class="important material-icons">priority_high</li>
+				</ul>
+			</li>
+			<li class="list-task">Выучить JavaScript
+				<ul class="buttons">
+					<li class="delete material-icons">delete</li>
+					<li class="important material-icons">priority_high</li>
+				</ul>
+			</li>
+			<li class="list-task">Написать список задач
+				<ul class="buttons">
+					<li class="delete material-icons">delete</li>
+					<li class="important material-icons">priority_high</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 </div>

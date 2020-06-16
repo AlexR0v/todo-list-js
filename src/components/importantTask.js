@@ -4,26 +4,25 @@ const importantTask = () => {
 	но как решить по другому я пока не придумал.
 	Если будут добавлять события, то этот код работать не будет... ушел думать...*/
 
-	const todoList = document.querySelector('.list-item');
+	const todoList = document.querySelector('.todo-list');
 
 	todoList.addEventListener('click', evt=>{
-		const task = evt.target;
-		let a = evt.target.parentNode.parentNode.firstElementChild.children[0]; //путь к элементу списка
-		let a1 = evt.target.parentNode.parentNode.firstElementChild.children[1];
-		let a2 = evt.target.parentNode.parentNode.firstElementChild.children[2];
-		let b = evt.target.parentNode.children[0]//путь к кнопке
-		let b1 = evt.target.parentNode.children[1]
-		let b2 = evt.target.parentNode.children[2]
-		if(task == b){ //если нажатая кнопка совпадает с элементов, то action
-			a.style.color = 'red'
-		} else if(task == b1){
-			a1.style.color = 'red'
-		} else if(task == b2){
-			a2.style.color = 'red'
+		evt.preventDefault();
+		let task = evt.target.parentElement.parentElement;
+		if(task.style.textDecoration === 'line-through'){
+			task.style.color = 'black';
+			task.style.fontWeight = 'normal';
+			task.style.textDecoration = 'none';
+			task.style.opacity = '1';
+
+		} else if(evt.target.className ==='important material-icons'){
+			task.style.color = 'red';
+			task.style.fontWeight = 'bold'
+		} else if(task.style.textDecoration === 'none'){
+			task.style.fontWeight = 'normal';
+			task.style.opacity = '1';
+
 		}
 	})
-
-
-
 };
 export default importantTask;

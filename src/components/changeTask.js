@@ -1,22 +1,25 @@
 const changeTask = () => {
 
-	const todoList = document.querySelector('.list-item');
+	const todoList = document.querySelector('.todo-list');
 
-	todoList.addEventListener('dblclick', evt=>{
-		const task = evt.target;
-		if(task.className === 'list-task' ){
+	todoList.addEventListener('click', evt=>{
+		evt.preventDefault();
+		let task = evt.target.parentElement.parentElement;
+		if(evt.target.className ==='delete material-icons'){
 			task.style.textDecoration = 'line-through';
 			task.style.opacity = '0.5';
+			task.style.color = 'black';
+
 		}
-	})
-
-	// todoList.addEventListener('dblclick', evt =>{
-	// 	const task = evt.target;
-	// 	if(task.style.textDecoration === 'line-through'){
-	// 		task.style.textDecoration = 'none';
-	// 		task.style.opacity = '1';
+	});
+//TODO доделать это условие
+	// todoList.addEventListener('click', evt=> {
+	// 	evt.preventDefault();
+	// 	let task = evt.target.parentElement.parentElement;
+	// 	if(task.//??? && evt.target.className === 'delete material-icons'){
+	// 		task.remove();
+	//
 	// 	}
-	// })
-
+	// });
 };
 export default changeTask;
