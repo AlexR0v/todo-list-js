@@ -36,6 +36,8 @@
       .list .list-item .todo-list .list-task {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        white-space: pre-wrap;
         align-items: center;
         border: 1px solid gray;
         padding: 0 15px 0 15px;
