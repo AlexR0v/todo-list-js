@@ -6,12 +6,11 @@ const changeTask = () => {
 	//клик по корзине зачеркивает задачу
 	todoList.addEventListener('click', evt=>{
 		evt.preventDefault();
-		let task = evt.target.parentElement.parentElement; //путь к дедушке
+		let task = evt.target.closest('[data-task-id]');//определяем родителя кнопки
 		if(evt.target.className ==='delete material-icons'){
 			task.style.textDecoration = 'line-through';
 			task.style.opacity = '0.5';
 			task.style.color = 'black';
-			task.setAttribute('title', '1') //возможно лишнее, нужно удалить
 		}
 
 
@@ -19,8 +18,8 @@ const changeTask = () => {
 
 	//двойной клик по корзине удаляет элемент
 	todoList.addEventListener('dblclick', (evt)=>{
-		let task = evt.target.parentElement.parentElement;
-		if(evt.target.className ==='delete material-icons' && task.hasAttribute('title')){
+		let task = evt.target.closest('[data-task-id]');
+		if(evt.target.className ==='delete material-icons'){
 			task.remove()
 		}
 	})

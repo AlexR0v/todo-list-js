@@ -12,12 +12,19 @@
 </head>
 <body>
 
-<div class="header">
+<div class="wrap">
+
+	<input class="input-btn" type="checkbox" id="s1" />
+	<label class="slider-v1" for="s1"></label>
+
+</div>
+
+<div oncontextmenu="return false" class="header">
 	<div class="header-item">
 		<h1>My todo list</h1>
 		<div class="input-task">
 			<input type="text" id="input" class="task" type="text"
-				   placeholder="Новая задача..." value="">
+				   placeholder="Новая задача...">
 			<button class="btn">Добавить</button>
 		</div>
 	</div>
@@ -25,22 +32,24 @@
 <div class="list">
 	<div class="list-item">
 		<ul id="todo-list" class="todo-list">
-			<li class="list-task">Выпить кофе
+			<li data-task-id class="list-task">Выпить кофе
 				<ul class="buttons">
-					<li class="delete material-icons">delete</li>
-					<li class="important material-icons">priority_high</li>
+					<li title="1 клик вычеркнуть, 2 клика удалить"
+						class="delete material-icons">delete</li>
+					<li title="отметить важным"
+						class="important material-icons">priority_high</li>
 				</ul>
 			</li>
-			<li class="list-task">Выучить JavaScript
+			<li data-task-id class="list-task">Выучить JavaScript
 				<ul class="buttons">
-					<li class="delete material-icons">delete</li>
-					<li class="important material-icons">priority_high</li>
+					<li title="1 клик вычеркнуть, 2 клика удалить" class="delete material-icons">delete</li>
+					<li title="отметить важным" class="important material-icons">priority_high</li>
 				</ul>
 			</li>
-			<li class="list-task">Написать список задач
+			<li data-task-id class="list-task">Написать список задач
 				<ul class="buttons">
-					<li class="delete material-icons">delete</li>
-					<li class="important material-icons">priority_high</li>
+					<li title="1 клик вычеркнуть, 2 клика удалить" class="delete material-icons">delete</li>
+					<li title="отметить важным" class="important material-icons">priority_high</li>
 				</ul>
 			</li>
 		</ul>

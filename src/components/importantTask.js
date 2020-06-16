@@ -6,7 +6,7 @@ const importantTask = () => {
 	//клик по вопрозительному знаку возвращает зачеркнутую задачу
 	todoList.addEventListener('click', evt=>{
 		evt.preventDefault();
-		let task = evt.target.parentElement.parentElement;
+		let task = evt.target.closest('[data-task-id]');//определяем родителя кнопки
 		if(task.style.textDecoration === 'line-through'){
 			task.style.color = 'black';
 			task.style.fontWeight = 'normal';
